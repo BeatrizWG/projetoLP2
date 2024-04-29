@@ -68,8 +68,10 @@ public class OperacoesMenu {
 	
 	public boolean fecharConta(int ID, Conta [] lista) { 
 		
-		// IMPLEMENTAR
-		
-		return false;	
+		for (int i = ID + 1; i < lista.length; i++) {
+			lista[i].ID = lista[i].ID - 1;
+			lista[i - 1] = lista[i];
+		}
+		return true;
 	}
 }
